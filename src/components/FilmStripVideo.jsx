@@ -175,6 +175,36 @@ export default function FilmStripVideo({ onBackToAlbum, onBackToHome }) {
 
         </motion.div>
 
+        {/* ================= FINAL HEARTFELT MESSAGE ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="relative z-20 mt-8 mb-2 max-w-xl w-full mx-auto px-4 text-center"
+        >
+          <div className="relative rounded-3xl bg-gradient-to-b from-[#58323E]/95 via-[#4a2833]/95 to-[#3b1d26]/95 p-7 sm:p-9 shadow-[0_15px_40px_rgba(0,0,0,0.45)] border-2 border-[#f3e3ce]/30 backdrop-blur-md flex flex-col items-center">
+            
+            {/* Heart Animation */}
+            <motion.div
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+              className="w-12 h-12 rounded-full bg-[#f3e3ce]/20 border border-[#f3e3ce]/40 flex items-center justify-center text-xl mb-3 shadow-inner"
+            >
+              ❤️
+            </motion.div>
+
+            <span className="font-serif text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#dcc6ad] mb-3 font-semibold">
+              From My Heart
+            </span>
+
+            <p className="font-letter text-lg sm:text-2xl leading-relaxed text-[#f3e3ce] font-bold italic drop-shadow-sm max-w-md">
+              "I just want you to forgive me  put everything behind us and give us another chance I miss us and I really want us to be okay again ❤️"
+            </p>
+
+            <div className="w-16 h-0.5 bg-[#f3e3ce]/30 mt-4"></div>
+          </div>
+        </motion.div>
+
         {/* Action Buttons Below Film */}
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3 z-30">
           <motion.button
